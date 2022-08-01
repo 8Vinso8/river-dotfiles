@@ -52,6 +52,19 @@ output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
 # You can get the names of your inputs by running: swaymsg -t get_inputs
 # Read `man 5 sway-input` for more information about this section.
 
+input type:touchpad {
+    dwt enabled
+    tap enabled
+    middle_emulation enabled
+    natural_scroll disabled
+    pointer_accel 0.25
+    tap_button_map lrm
+}
+
+input * {
+    xkb_layout "us,ru"
+    xkb_options "grp:caps_toggle"
+}
 ### Key bindings
 #
 # Basics:
@@ -199,7 +212,7 @@ bar {
 
     # When the status_command prints a new line to stdout, swaybar updates.
     # The default just shows the current date and time.
-    status_command while date +'%Y-%m-%d %I:%M:%S %p'; do sleep 1; done
+    status_command while date +'%Y-%m-%d %H:%M:%S %p'; do sleep 1; done
 
     colors {
         statusline #ffffff
