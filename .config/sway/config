@@ -151,7 +151,7 @@ input * {
     bindsym --to-code $mod+space focus mode_toggle
 
     # Move focus to the parent container
-    bindsym --to-code $mod+a focus parent
+    #bindsym --to-code $mod+a focus parent
 
 # Scratchpad:
     # Sway has a "scratchpad", which is a bag of holding for windows.
@@ -208,6 +208,9 @@ bindsym --to-code $mod+Print exec grimshot --notify save screen $scrdir
 bindsym --to-code $mod+Shift+s exec grimshot --notify copy area
 bindsym --to-code Mod1+Print exec grimshot --notify copy active
 bindsym --to-code Mod1+$mod+Print exec grimshot --notify save active $scrdir
+# Program shortcuts
+bindsym --to-code $mod+m exec google-chrome-stable
+bindsym --to-code $mod+n exec code
 # Appearance
 default_border pixel 1
 default_floating_border normal
