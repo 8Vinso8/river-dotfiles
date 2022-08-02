@@ -4,6 +4,13 @@ image=/home/vinso/backgrounds/background.png
 hide-keyboard-layout
 disable-caps-lock-text
 indicator-radius=100
+key-hl-color=85e89d
+font=Fira Code
+inside-clear-color=d1d5da
+inside-wrong-color=ea4a5a
+inside-ver-color=2188ff
 inside-color=24292e
 ring-color=34d058
-key-hl-color=85e89d
+ring-clear-color=fafbfc
+ring-ver-color=79b8ff
+ring-wrong-color=f97583
