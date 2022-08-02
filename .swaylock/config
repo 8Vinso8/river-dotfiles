@@ -1,0 +1,9 @@
+ignore-empty-password
+daemonize
+image=/home/vinso/backgrounds/background.png
+hide-keyboard-layout
+disable-caps-lock-text
+indicator-radius=100
+inside-color=24292e
+ring-color=34d058
+key-hl-color=85e89d
