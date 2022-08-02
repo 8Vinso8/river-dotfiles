@@ -1,66 +1,63 @@
-{   
-    "layer": "bottom",
-    "position": "top",
-    "mode": "dock",
-    "modules-left": ["sway/workspaces", "sway/mode", "custom/media"],
-    "modules-center": ["sway/window"],
-    "modules-right": ["idle_inhibitor", "pulseaudio", "network", "cpu", "memory", "backlight", "sway/language", "battery", "clock", "tray"],
+{
+    "spacing": 0,
+    "modules-center": ["sway/workspaces"],
+    "modules-left": ["cpu", "memory", "temperature","sway/mode", "tray"],
+    "modules-right": ["idle_inhibitor", "pulseaudio", "network", "backlight",  "battery","sway/language", "clock"],
     "sway/mode": {
-        "format": "<span style=\"italic\">{}</span>"
+        "format": "{}"
     },
     "idle_inhibitor": {
         "format": "{icon}",
         "format-icons": {
-            "activated": "",
-            "deactivated": ""
-        }
+            "activated": "",
+            "deactivated": ""
+        },
+        "tooltip": false
     },
     "tray": {
-        // "icon-size": 21,
         "spacing": 10
     },
     "clock": {
+        "format": "{:%Y.%m.%d %H:%M}",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-        "format-alt": "{:%Y-%m-%d}"
     },
     "cpu": {
-        "format": "{usage}% <span font='20' rise='-4pt'></span>",
-        "tooltip": false
+        "format": "{usage}% ",
     },
     "memory": {
-        "format": "{}% <span font='20' rise='-4pt'></span>"
+        "format": "{}% "
+    },
+    "temperature": {
+        "critical-threshold": 80,
+        "format": "{temperatureC}°C {icon}",
+        "format-icons": ["", "", ""],
+        "tooltip": false
     },
     "backlight": {
-        "format": "{percent}% <span font='20' rise='-4pt' color='#ffea7f'>{icon}</span>",
+        "format": "{percent}% {icon}",
         "format-icons": ["", "", "", "", "", "", "", "", ""]
     },
     "battery": {
-        "states": {
-            // "good": 95,
-            "warning": 30,
-            "critical": 15
-        },
-        "format": "{capacity}% <span font='30' rise='-9pt'>{icon}</span>",
-        "format-charging": "{capacity}% ",
+        "format": "{capacity}% {icon}",
+        "format-charging": "{capacity}% ",
         "format-plugged": "{capacity}% ",
-        // "format-good": "", // An empty format will hide the module
-        // "format-full": "",
-        "format-icons": ["", "", "", "", ""]
+        "format-icons": ["", "", "", "", "", "", "", "", "", ""]
     },
     "network": {
-        "format-wifi": "<span font='26'></span>",
+        "format-wifi": "",
         "format-ethernet": "{ipaddr}/{cidr} ",
         "tooltip-format": "{ifname} via {gwaddr} ",
         "format-linked": "{ifname} (No IP) ",
         "format-disconnected": "⚠",
+        "on-click": "nmtui"
     },
     "pulseaudio": {
-        "format": "{volume}% <span font='20' rise='-4pt'>{icon}</span>|{format_source}",
-        "format-bluetooth": "{volume}% <span font='20' rise='-4pt'>{icon}</span> {format_source}",
-        "format-bluetooth-muted": "<span font='20' rise='-4pt'> {icon}</span> {format_source}",
-        "format-muted": "<span font='12' rise='-4pt'>🔇</span> {format_source}",
-        "format-source": "<span font='14' rise='-0.5pt'></span>",
-        "format-source-muted": "<span font='16' rise='-5qpt'></span>",
+        "format": "{volume}% {icon} {format_source}",
+        "format-bluetooth": "{volume}% {icon} {format_source}",
+        "format-bluetooth-muted": " {icon} {format_source}",
+        "format-muted": " {format_source}",
+        "format-source": "",
+        "format-source-muted": "",
         "format-icons": {
             "headphone": "",
             "hands-free": "",
@@ -71,5 +68,5 @@
             "default": ["", "", ""]
         },
         "on-click": "pavucontrol"
-    },
+    }
 }
