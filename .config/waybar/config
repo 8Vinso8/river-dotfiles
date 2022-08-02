@@ -68,5 +68,11 @@
             "default": ["", "", ""]
         },
         "on-click": "pavucontrol"
+    },
+    "sway/workspaces": {
+        "disable-scroll": true
+    },
+    "sway/language": {
+        "tooltip": false
     }
 }
