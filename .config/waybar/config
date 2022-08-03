@@ -1,10 +1,13 @@
 {
     "spacing": 0,
     "modules-center": ["sway/workspaces"],
-    "modules-left": ["cpu", "memory", "temperature","sway/mode", "tray"],
+    "modules-left": ["cpu", "memory", "temperature","sway/mode","disk", "tray"],
     "modules-right": ["idle_inhibitor", "pulseaudio", "network", "backlight",  "battery","sway/language", "clock"],
     "sway/mode": {
         "format": "{}"
+    },
+    "disk": {
+        "format": "{percentage_used}% "
     },
     "idle_inhibitor": {
         "format": "{icon}",
