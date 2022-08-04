@@ -1,6 +1,6 @@
 {
     "spacing": 0,
-    "modules-center": ["sway/workspaces"],
+    "modules-center": ["sway/workspaces", "river/tags"],
     "modules-left": ["cpu", "memory", "temperature","sway/mode","disk", "tray"],
     "modules-right": ["idle_inhibitor", "pulseaudio", "network", "backlight",  "battery","sway/language", "clock"],
     "sway/mode": {

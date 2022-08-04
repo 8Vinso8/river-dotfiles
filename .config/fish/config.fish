@@ -105,7 +105,7 @@ alias pscpu='ps auxf | sort -nr -k 3'
 
 # get error messages from journalctl
 alias jctl="journalctl -p 3 -xb"
-
+ 
 # Mocp must be launched with bash instead of Fish!
 alias mocp="bash -c mocp"
 # bare git repo alias for dotfiles
@@ -114,6 +114,6 @@ alias config="/usr/bin/git --git-dir=$HOME/dotfiles --work-tree=$HOME"
 ### SETTING THE STARSHIP PROMPT ###
 starship init fish | source
 
-if test -z $DISPLAY; and test (tty) = "/dev/tty1"
-    sway
-end
+# if test -z $DISPLAY; and test (tty) = "/dev/tty1"
+    # sway
+# end
