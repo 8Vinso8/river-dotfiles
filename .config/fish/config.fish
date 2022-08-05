@@ -114,6 +114,8 @@ alias config="/usr/bin/git --git-dir=$HOME/dotfiles --work-tree=$HOME"
 ### SETTING THE STARSHIP PROMPT ###
 starship init fish | source
 
-# if test -z $DISPLAY; and test (tty) = "/dev/tty1"
-    # sway
-# end
+if test -z $DISPLAY; and test (tty) = "/dev/tty1"
+  set -x XKB_DEFAULT_LAYOUT "us,ru"
+  set -x XKB_DEFAULT_OPTIONS "grp:caps_toggle"
+  river
+end
